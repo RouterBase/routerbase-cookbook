@@ -1,0 +1,24 @@
+{
+  "name": "routerbase-cookbook",
+  "version": "0.1.0",
+  "description": "Practical tutorials and examples for RouterBase.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:node": "node --test examples/node/test/*.test.mjs",
+    "check:content": "node scripts/validate.mjs",
+    "verify": "npm run test:node && npm run check:content"
+  },
+  "keywords": [
+    "routerbase",
+    "openai-compatible",
+    "ai",
+    "llm",
+    "cookbook"
+  ],
+  "homepage": "https://routerbase.com",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
