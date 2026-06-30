@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">RouterBase request flow</title>
+  <desc id="desc">Application requests go to RouterBase, then route to model providers using an OpenAI-compatible API shape.</desc>
+  <rect width="720" height="520" fill="#f8fbf8"/>
+  <rect x="34" y="36" width="652" height="448" rx="18" fill="#ffffff" stroke="#d9e4df" stroke-width="2"/>
+  <text x="70" y="86" fill="#18211f" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">One request shape, multiple model paths</text>
+  <text x="72" y="118" fill="#55625f" font-family="Inter, Arial, sans-serif" font-size="16">OpenAI-compatible calls through https://routerbase.com/v1</text>
+
+  <rect x="74" y="178" width="150" height="96" rx="12" fill="#d9f8e6" stroke="#116b67" stroke-width="2"/>
+  <text x="107" y="217" fill="#18211f" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">App</text>
+  <text x="101" y="244" fill="#55625f" font-family="Inter, Arial, sans-serif" font-size="14">chat request</text>
+
+  <path d="M238 226H330" stroke="#116b67" stroke-width="4" stroke-linecap="round"/>
+  <path d="M318 212l18 14-18 14" fill="none" stroke="#116b67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="350" y="156" width="180" height="140" rx="14" fill="#18211f"/>
+  <text x="391" y="211" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">RouterBase</text>
+  <text x="383" y="240" fill="#d9f8e6" font-family="Inter, Arial, sans-serif" font-size="14">/v1/chat/completions</text>
+
+  <path d="M532 188C592 160 620 148 656 136" stroke="#c6533c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M532 226H650" stroke="#6a5acd" stroke-width="4" stroke-linecap="round"/>
+  <path d="M532 264C592 300 620 320 656 348" stroke="#d08a1d" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="520" y="108" width="132" height="52" rx="10" fill="#fff4ee" stroke="#c6533c"/>
+  <text x="552" y="141" fill="#18211f" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Model A</text>
+
+  <rect x="520" y="200" width="132" height="52" rx="10" fill="#f1efff" stroke="#6a5acd"/>
+  <text x="552" y="233" fill="#18211f" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Model B</text>
+
+  <rect x="520" y="328" width="132" height="52" rx="10" fill="#fff8e7" stroke="#d08a1d"/>
+  <text x="552" y="361" fill="#18211f" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Model C</text>
+
+  <rect x="74" y="342" width="392" height="74" rx="12" fill="#f4f7f5" stroke="#d9e4df"/>
+  <text x="98" y="374" fill="#18211f" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Keep application code stable</text>
+  <text x="98" y="400" fill="#55625f" font-family="Inter, Arial, sans-serif" font-size="14">Change model ids and routing without rewriting prompt workflows.</text>
+</svg>

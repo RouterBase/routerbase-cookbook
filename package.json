@@ -1,6 +1,6 @@
 {
   "name": "routerbase-cookbook",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Practical tutorials and examples for RouterBase.",
   "private": true,
   "type": "module",
@@ -16,7 +16,7 @@
     "llm",
     "cookbook"
   ],
-  "homepage": "https://routerbase.com",
+  "homepage": "https://routerbase.github.io/routerbase-cookbook/",
   "license": "MIT",
   "engines": {
     "node": ">=18"

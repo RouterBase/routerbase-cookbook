@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RouterBase API Collections</title>
+    <meta name="description" content="Import RouterBase OpenAPI, Postman, Bruno, and Insomnia collections.">
+    <link rel="canonical" href="https://routerbase.github.io/routerbase-cookbook/api-collections.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">RouterBase Cookbook</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="get-started.html">Get Started</a>
+        <a href="api-collections.html">API Collections</a>
+        <a href="content-plan.html">Content Plan</a>
+        <a href="https://routerbase.com">RouterBase</a>
+      </nav>
+    </header>
+
+    <main class="article-layout">
+      <article class="article">
+        <p class="eyebrow">API clients</p>
+        <h1>Import RouterBase before writing code</h1>
+        <p>
+          The public <a href="https://github.com/RouterBase/routerbase-api-collections">RouterBase API collections</a>
+          repository contains request files for OpenAPI, Postman, Bruno, and Insomnia.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Format</th>
+                <th>Path</th>
+                <th>Use case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OpenAPI</td>
+                <td><code>openapi/routerbase.openapi.json</code></td>
+                <td>Documentation, SDK experiments, contract review</td>
+              </tr>
+              <tr>
+                <td>Postman</td>
+                <td><code>postman/routerbase.postman_collection.json</code></td>
+                <td>Manual request testing</td>
+              </tr>
+              <tr>
+                <td>Bruno</td>
+                <td><code>bruno/RouterBase</code></td>
+                <td>Git-friendly API collections</td>
+              </tr>
+              <tr>
+                <td>Insomnia</td>
+                <td><code>insomnia/routerbase.insomnia.json</code></td>
+                <td>Workspace import and request exploration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Environment</h2>
+        <pre><code>ROUTERBASE_BASE_URL=https://routerbase.com/v1
+ROUTERBASE_API_KEY=your-secret-key</code></pre>
+
+        <h2>Smoke test order</h2>
+        <ol>
+          <li>Run <code>GET /models</code> to confirm authentication.</li>
+          <li>Run <code>POST /chat/completions</code> with a short prompt.</li>
+          <li>Move the same request body into your application code.</li>
+        </ol>
+      </article>
+
+      <aside class="aside">
+        <h2>References</h2>
+        <a href="https://docs.routerbase.com/">RouterBase docs</a>
+        <a href="https://github.com/RouterBase/routerbase-api-collections/releases">Collection releases</a>
+        <a href="https://github.com/RouterBase/routerbase-cookbook/blob/main/tutorials/postman-and-openapi.md">Markdown tutorial</a>
+      </aside>
+    </main>
+  </body>
+</html>

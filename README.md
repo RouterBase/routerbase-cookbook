@@ -4,6 +4,10 @@
 
 This cookbook collects practical tutorials, copy-ready prompts, and small examples for teams evaluating RouterBase in real applications.
 
+Static site:
+
+- `https://routerbase.github.io/routerbase-cookbook/`
+
 ## Start Here
 
 - [Use RouterBase as an OpenAI-compatible API gateway](tutorials/openai-compatible-gateway.md)

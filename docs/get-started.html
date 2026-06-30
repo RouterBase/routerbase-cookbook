@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RouterBase Get Started</title>
+    <meta name="description" content="A quick RouterBase chat-completions tutorial using one OpenAI-compatible base URL.">
+    <link rel="canonical" href="https://routerbase.github.io/routerbase-cookbook/get-started.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">RouterBase Cookbook</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="get-started.html">Get Started</a>
+        <a href="api-collections.html">API Collections</a>
+        <a href="content-plan.html">Content Plan</a>
+        <a href="https://routerbase.com">RouterBase</a>
+      </nav>
+    </header>
+
+    <main class="article-layout">
+      <article class="article">
+        <p class="eyebrow">Quickstart</p>
+        <h1>Use RouterBase as an OpenAI-compatible gateway</h1>
+        <p>
+          <a href="https://routerbase.com">RouterBase</a> exposes an OpenAI-compatible API at
+          <code>https://routerbase.com/v1</code>. For many chat-completions integrations, the first experiment is a base URL,
+          API key, and model id change.
+        </p>
+
+        <h2>Minimal request</h2>
+        <pre><code>curl https://routerbase.com/v1/chat/completions \
+  -H "Authorization: Bearer $ROUTERBASE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "google/gemini-2.5-flash",
+    "messages": [
+      { "role": "user", "content": "Explain RouterBase in one sentence." }
+    ]
+  }'</code></pre>
+
+        <h2>Node.js pattern</h2>
+        <pre><code>const response = await fetch("https://routerbase.com/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    Authorization: `Bearer ${process.env.ROUTERBASE_API_KEY}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    model: process.env.ROUTERBASE_MODEL || "google/gemini-2.5-flash",
+    messages: [
+      { role: "user", content: "Draft a short product update." }
+    ]
+  })
+});</code></pre>
+
+        <h2>Rollout notes</h2>
+        <ul>
+          <li>Keep the model id configurable.</li>
+          <li>Test one workflow before changing production traffic.</li>
+          <li>Track latency, cost, error rate, and output quality.</li>
+          <li>Use the API collections for a request smoke test before writing code.</li>
+        </ul>
+
+        <p class="next-link">
+          Next: <a href="api-collections.html">Import RouterBase into Postman, Bruno, or Insomnia</a>.
+        </p>
+      </article>
+
+      <aside class="aside">
+        <h2>References</h2>
+        <a href="https://docs.routerbase.com/">RouterBase docs</a>
+        <a href="https://github.com/RouterBase/routerbase-examples">Examples repository</a>
+        <a href="https://github.com/RouterBase/routerbase-cookbook/blob/main/tutorials/openai-compatible-gateway.md">Markdown tutorial</a>
+      </aside>
+    </main>
+  </body>
+</html>
